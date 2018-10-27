@@ -1,7 +1,7 @@
 {
-  "name": "customer1",
-  "version": "1.0.0",
-  "description": "First real project to a real customer.",
+  "name": "box-slider",
+  "version": "0.1.0",
+  "description": "Slider with boxes",
   "author": "Dávid Csejtei",
   "scripts": {
     "start": "webpack-dev-server --open --mode development -w --config webpack.development.js",

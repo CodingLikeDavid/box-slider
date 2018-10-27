@@ -1,0 +1,44 @@
+$grid-gutter-width: 14px;
+$h1-font-size: 18px;
+$h2-font-size: 14px;
+$h3-font-size: 16px;
+$headings-line-height: 1.4;
+$lead-font-size: 15px;
+$enable-shadows: true;
+
+@import "~bootstrap/scss/bootstrap";
+
+.spinner {
+  color: #6dc4ff;
+}
+
+.arrow {
+  cursor: pointer;
+  color: #6dc4ff;
+
+  &:hover {
+    color: #4882a8;
+  }
+}
+
+.card {
+  cursor: pointer;
+
+  &:hover {
+    transition: box-shadow .3s;
+    box-shadow: 0 0 11px rgba(93, 93, 93, 0.2);
+  }
+
+  .card-img-top {
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+
+  h2 {
+    font-weight: normal;
+  }
+}
+
+.disabled {
+  color: #e0e0e0 !important;
+}

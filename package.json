@@ -7,6 +7,11 @@
     "start": "webpack-dev-server --open --mode development -w --config webpack.development.js",
     "build": "webpack --mode production --config webpack.production.js"
   },
+  "homepage": "https://github.com/CodingLikeDavid/box-slider",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:CodingLikeDavid/box-slider.git"
+  },
   "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.4",

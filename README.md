@@ -1,13 +1,7 @@
 # Box Slider
 
-## How to install
+## Install
 
 ```
-npm install box-slider
-```
-
-## How to use
-
-```
-
+npm i box-slider
 ```

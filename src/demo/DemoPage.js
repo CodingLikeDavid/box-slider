@@ -1,7 +1,19 @@
-import {GET_ALL_LECTURES} from './types';
+import React, {Component} from 'react';
 
-export function getAllLectures() {
-    return async function (dispatch) {
+import Slider from '../Slider';
+import SliderArrow, {PREV} from '../SliderArrow';
+import { NEXT } from '../SliderArrow';
+
+export default class DemoPage extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            boxesPerSlide: 4
+        }
+    }
+
+    getLectures() {
         let lectures = [];
         lectures.push(
             {
@@ -75,14 +87,29 @@ export function getAllLectures() {
                 prize: '199.99'
             }
         );
-
-        return await dispatch(loadAllLectures(lectures));
+        return lectures;
     }
-}
 
-function loadAllLectures(lectures) {
-    return {
-        type: GET_ALL_LECTURES,
-        payload: lectures
+    render() {
+        return (
+            <div className='container'>
+                <div className="row">
+                    <div className="col pt-3 pb-3">
+                        <h1>Demo page</h1>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col p-0">
+                        <Slider sliderId='lectureSlider'
+                                items={this.getLectures()}
+                                numberOfItemsPerSlide={this.state.boxesPerSlide}/>
+                    </div>
+                    <div className="col-2 p-0">
+                        <SliderArrow targetSliderId='lectureSlider' direction={NEXT}/>
+                        <SliderArrow targetSliderId='lectureSlider' direction={PREV}/>
+                    </div>
+                </div>
+            </div>
+        );
     }
 }

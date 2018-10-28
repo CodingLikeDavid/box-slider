@@ -3,19 +3,16 @@
   "version": "0.1.0",
   "description": "Slider with boxes",
   "author": "Dávid Csejtei",
-  "keywords": [
-    "react",
-    "slider"
-  ],
+  "main": "./library/box-slider.js",
+  "module": "./library/box-slider.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development -w --config webpack.demo.js",
-    "build": "webpack --mode production --config webpack.production.js",
-    "build-demo": "webpack --mode production -w --config webpack.demo.js"
+    "build": "webpack -w --open --config webpack.production.js",
+    "build-demo": "webpack --display-modules --mode production -w --config webpack.demo.js"
   },
-  "homepage": "https://github.com/CodingLikeDavid/box-slider",
+  "homepage": "https://github.com/davidcsejtei/personal-box#readme",
   "repository": {
     "type": "git",
-    "url": "git@github.com:CodingLikeDavid/box-slider.git"
+    "url": "git@github.com:davidcsejtei/personal-box.git"
   },
   "license": "MIT",
   "dependencies": {
@@ -53,10 +50,10 @@
     "compression-webpack-plugin": "^1.1.11",
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^0.28.9",
-    "exports-loader": "^0.7.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
     "html-webpack-plugin": "^3.2.0",
+    "imports-loader": "^0.8.0",
     "node-sass": "^4.9.3",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^16.3.2",
@@ -68,7 +65,6 @@
     "style-loader": "^0.20.1",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.9",
     "webpack-merge": "^4.1.1",
     "webpack-visualizer-plugin": "^0.1.11"
   }

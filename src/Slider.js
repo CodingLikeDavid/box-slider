@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
+import 'bootstrap';
 
-import firstImage from '../../../img/01.jpg';
+import '../style/layout.scss';
+
+import firstImage from '../img/01.jpg';
 
 class Slider extends Component {
 

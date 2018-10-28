@@ -8,17 +8,12 @@ export const PREV = 'prev';
 
 class SliderArrow extends Component {
 
-    scrollToTop() {
-
-    }
-
     getArrow() {
         return (
             <div className='col'>
                 <a href={'#' + this.props.targetSliderId} role="button" data-slide={this.props.direction}>
                     <FontAwesomeIcon icon={this.props.direction == PREV ? faArrowCircleLeft : faArrowCircleRight}
-                                     className='fa-3x arrow'
-                                     onClick={this.scrollToTop()}/>
+                                     className='fa-3x arrow' />
                 </a>
             </div>
         );

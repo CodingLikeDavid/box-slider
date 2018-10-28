@@ -1,18 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Project for Customer1',
+            title: 'Box Slider',
             template: './webpack_template/index.ejs',
             inject: '#root',
         }),
-        new CopyWebpackPlugin([
-            {from: './img', to: 'img'}
-        ]),
         new webpack.ProvidePlugin({
             $: "jquery"
         })
@@ -27,20 +23,20 @@ module.exports = {
                 }
             },
             {
+                test: /\.scss$/,
+                use: [
+                    {loader: "style-loader"},
+                    {loader: "css-loader"},
+                    {loader: "sass-loader"}
+                ]
+            },
+            {
                 test: /\.(png|jpg|gif)$/,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {}
                     }
-                ]
-            },
-            {
-                test: /\.scss$/,
-                use: [
-                    {loader: "style-loader"},
-                    {loader: "css-loader"},
-                    {loader: "sass-loader"}
                 ]
             },
             {

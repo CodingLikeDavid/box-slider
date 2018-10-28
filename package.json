@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "description": "Slider with boxes",
   "author": "Dávid Csejtei",
+  "keywords": [
+    "react",
+    "slider"
+  ],
   "scripts": {
-    "start": "webpack-dev-server --open --mode development -w --config webpack.development.js",
-    "build": "webpack --mode production --config webpack.production.js"
+    "start": "webpack-dev-server --open --mode development -w --config webpack.demo.js",
+    "build": "webpack --mode production --config webpack.production.js",
+    "build-demo": "webpack --mode production -w --config webpack.demo.js"
   },
   "homepage": "https://github.com/CodingLikeDavid/box-slider",
   "repository": {
